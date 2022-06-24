@@ -10,5 +10,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+    pwa: {
+      workboxOptions: {
+        exclude: [/_redirects/]
+      }
+    }
 })
